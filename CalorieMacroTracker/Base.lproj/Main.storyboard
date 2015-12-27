@@ -1,25 +1,227 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fjY-kU-5c8">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Calories and Macros-->
+        <scene sceneID="cvU-Gi-hZ7">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0q3-Ia-0Dd" customClass="FoodViewController" customModule="CalorieMacroTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="g2C-S2-m5M"/>
+                        <viewControllerLayoutGuide type="bottom" id="YvR-9Q-u7v"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="Ijc-3M-wdi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the amount of calories" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hRJ-QL-9xF">
+                                <rect key="frame" x="175" y="136" width="238" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of meal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ogY-Gp-jug">
+                                <rect key="frame" x="175" y="98" width="238" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the grams of Protein" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2jk-ac-6r8">
+                                <rect key="frame" x="175" y="174" width="238" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the grams of Carbs" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0sX-j5-IJO">
+                                <rect key="frame" x="175" y="212" width="238" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the grams of Fats" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TeD-uA-BwK">
+                                <rect key="frame" x="175" y="250" width="238" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFA-aP-y7J">
+                                <rect key="frame" x="181" y="299" width="238" height="30"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Add ">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addFoodItem:" destination="0q3-Ia-0Dd" eventType="touchUpInside" id="FwH-y1-Utw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901967050000002" green="0.91372555489999996" blue="0.80392163989999998" alpha="1" colorSpace="deviceRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Calories and Macros" id="4RW-Cu-TSi"/>
+                    <connections>
+                        <outlet property="nameOfMeal" destination="ogY-Gp-jug" id="7cf-Vo-286"/>
+                        <outlet property="numOfCalories" destination="hRJ-QL-9xF" id="mdM-29-v84"/>
+                        <outlet property="numOfCarbs" destination="0sX-j5-IJO" id="8Ye-A0-Zw2"/>
+                        <outlet property="numOfFats" destination="TeD-uA-BwK" id="V2q-NV-Ro9"/>
+                        <outlet property="numOfProtein" destination="2jk-ac-6r8" id="ZJQ-Tu-jRb"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ubd-Ew-3wN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1084" y="293"/>
+        </scene>
+        <!--Food History-->
+        <scene sceneID="tp9-BZ-4cF">
+            <objects>
+                <tableViewController id="OAp-0A-8Fw" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ehR-0R-hVq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Ht2-4U-JeP">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ht2-4U-JeP" id="XmN-ti-9h4">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="OAp-0A-8Fw" id="Saf-KA-qas"/>
+                            <outlet property="delegate" destination="OAp-0A-8Fw" id="y51-r0-TBN"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Food History" id="00c-p3-dq3"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tyj-be-FpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1118" y="1046"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="cOR-vE-oKl">
+            <objects>
+                <viewController id="SuK-qF-eS6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wft-0S-yrl"/>
+                        <viewControllerLayoutGuide type="bottom" id="ghh-Sw-DbA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="21n-Hs-OaZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories &amp; Macros Tracker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7u-qm-HKS">
+                                <rect key="frame" x="175" y="105" width="250" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="eb9-FF-ee9"/>
+                                    <constraint firstAttribute="height" constant="40" id="vMm-fH-iES"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whether you're cutting, bulking, or maintaining, this app will benefit those who use it consistently!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hne-mi-Bcb">
+                                <rect key="frame" x="175" y="190" width="250" height="146"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                <color key="textColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9490196704864502" green="0.91372555494308472" blue="0.80392163991928101" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hne-mi-Bcb" firstAttribute="leading" secondItem="W7u-qm-HKS" secondAttribute="leading" id="1fd-LF-iXh"/>
+                            <constraint firstItem="ghh-Sw-DbA" firstAttribute="top" secondItem="Hne-mi-Bcb" secondAttribute="bottom" constant="215" id="G4t-95-WSy"/>
+                            <constraint firstItem="W7u-qm-HKS" firstAttribute="top" secondItem="Wft-0S-yrl" secondAttribute="bottom" constant="41" id="Ise-Jb-BLz"/>
+                            <constraint firstItem="Hne-mi-Bcb" firstAttribute="top" secondItem="W7u-qm-HKS" secondAttribute="bottom" constant="45" id="mrj-nE-Dxh"/>
+                            <constraint firstItem="Hne-mi-Bcb" firstAttribute="trailing" secondItem="W7u-qm-HKS" secondAttribute="trailing" id="waH-P2-OEt"/>
+                            <constraint firstItem="W7u-qm-HKS" firstAttribute="centerX" secondItem="21n-Hs-OaZ" secondAttribute="centerX" id="wzZ-Km-9yc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="mDZ-0A-iOb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rM7-uT-QRP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084" y="-380"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="s8N-NC-OGa">
+            <objects>
+                <tabBarController id="fjY-kU-5c8" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Ekn-ze-IU4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="FV9-eX-F0h" kind="relationship" relationship="viewControllers" id="69u-Hw-wNT"/>
+                        <segue destination="Q93-Kr-AUY" kind="relationship" relationship="viewControllers" id="kdE-av-Foh"/>
+                        <segue destination="cNo-Rd-m4F" kind="relationship" relationship="viewControllers" id="ssA-bc-Exf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tAP-fn-hlx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-263" y="269"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="37p-hq-KKd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FV9-eX-F0h" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="sample-504-doghouse.png" id="rR9-mL-Flw"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hmn-kZ-Yq9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SuK-qF-eS6" kind="relationship" relationship="rootViewController" id="Dfk-bU-rbk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vgs-Y6-AGh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448" y="-380"/>
+        </scene>
+        <!--Food-->
+        <scene sceneID="SGw-Ij-gdt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q93-Kr-AUY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Food" image="sample-886-ice-cream-cone.png" id="oBv-O9-J41"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G1z-OK-cM2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0q3-Ia-0Dd" kind="relationship" relationship="rootViewController" id="ZdM-Wv-HPO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XpZ-dA-cdo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448" y="293"/>
+        </scene>
+        <!--Food History-->
+        <scene sceneID="txM-Nk-K7l">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cNo-Rd-m4F" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Food History" image="sample-1040-checkmark.png" id="5md-IE-poL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hhz-X5-2tx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OAp-0A-8Fw" kind="relationship" relationship="rootViewController" id="Ztv-M3-NlV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xxc-RZ-NTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448" y="1046"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sample-1040-checkmark.png" width="28" height="26"/>
+        <image name="sample-504-doghouse.png" width="28" height="28"/>
+        <image name="sample-886-ice-cream-cone.png" width="20" height="28"/>
+    </resources>
 </document>

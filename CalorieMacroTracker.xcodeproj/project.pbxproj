@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F94D5B741C2F56D40009C2E8 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94D5B731C2F56D40009C2E8 /* FoodViewController.swift */; };
+		F94D5B761C2F57040009C2E8 /* FoodHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94D5B751C2F57040009C2E8 /* FoodHistoryTableViewController.swift */; };
 		F95754771C2E053400811137 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95754761C2E053400811137 /* AppDelegate.swift */; };
-		F95754791C2E053400811137 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95754781C2E053400811137 /* ViewController.swift */; };
 		F957547C1C2E053400811137 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F957547A1C2E053400811137 /* Main.storyboard */; };
 		F957547F1C2E053400811137 /* CalorieMacroTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F957547D1C2E053400811137 /* CalorieMacroTracker.xcdatamodeld */; };
 		F95754811C2E053400811137 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95754801C2E053400811137 /* Assets.xcassets */; };
 		F95754841C2E053400811137 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F95754821C2E053400811137 /* LaunchScreen.storyboard */; };
 		F957548F1C2E053400811137 /* CalorieMacroTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F957548E1C2E053400811137 /* CalorieMacroTrackerTests.swift */; };
 		F957549A1C2E053400811137 /* CalorieMacroTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95754991C2E053400811137 /* CalorieMacroTrackerUITests.swift */; };
+		F95754A81C2E0A9B00811137 /* sample-504-doghouse.png in Resources */ = {isa = PBXBuildFile; fileRef = F95754A71C2E0A9B00811137 /* sample-504-doghouse.png */; };
+		F95754AA1C2E0AD000811137 /* sample-379-barbell.png in Resources */ = {isa = PBXBuildFile; fileRef = F95754A91C2E0AD000811137 /* sample-379-barbell.png */; };
+		F95754AC1C2E0AE000811137 /* sample-886-ice-cream-cone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F95754AB1C2E0AE000811137 /* sample-886-ice-cream-cone@2x.png */; };
+		F95754AE1C2E0E4000811137 /* sample-1040-checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F95754AD1C2E0E4000811137 /* sample-1040-checkmark@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F94D5B731C2F56D40009C2E8 /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
+		F94D5B751C2F57040009C2E8 /* FoodHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodHistoryTableViewController.swift; sourceTree = "<group>"; };
 		F95754731C2E053400811137 /* CalorieMacroTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalorieMacroTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F95754761C2E053400811137 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F95754781C2E053400811137 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F957547B1C2E053400811137 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F957547E1C2E053400811137 /* CalorieMacroTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CalorieMacroTracker.xcdatamodel; sourceTree = "<group>"; };
 		F95754801C2E053400811137 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +55,10 @@
 		F95754951C2E053400811137 /* CalorieMacroTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalorieMacroTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F95754991C2E053400811137 /* CalorieMacroTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieMacroTrackerUITests.swift; sourceTree = "<group>"; };
 		F957549B1C2E053400811137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F95754A71C2E0A9B00811137 /* sample-504-doghouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sample-504-doghouse.png"; sourceTree = "<group>"; };
+		F95754A91C2E0AD000811137 /* sample-379-barbell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sample-379-barbell.png"; sourceTree = "<group>"; };
+		F95754AB1C2E0AE000811137 /* sample-886-ice-cream-cone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sample-886-ice-cream-cone@2x.png"; sourceTree = "<group>"; };
+		F95754AD1C2E0E4000811137 /* sample-1040-checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sample-1040-checkmark@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +109,13 @@
 		F95754751C2E053400811137 /* CalorieMacroTracker */ = {
 			isa = PBXGroup;
 			children = (
+				F95754A71C2E0A9B00811137 /* sample-504-doghouse.png */,
+				F95754A91C2E0AD000811137 /* sample-379-barbell.png */,
+				F95754AB1C2E0AE000811137 /* sample-886-ice-cream-cone@2x.png */,
+				F95754AD1C2E0E4000811137 /* sample-1040-checkmark@2x.png */,
+				F94D5B751C2F57040009C2E8 /* FoodHistoryTableViewController.swift */,
 				F95754761C2E053400811137 /* AppDelegate.swift */,
-				F95754781C2E053400811137 /* ViewController.swift */,
+				F94D5B731C2F56D40009C2E8 /* FoodViewController.swift */,
 				F957547A1C2E053400811137 /* Main.storyboard */,
 				F95754801C2E053400811137 /* Assets.xcassets */,
 				F95754821C2E053400811137 /* LaunchScreen.storyboard */,
@@ -232,7 +247,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F95754AC1C2E0AE000811137 /* sample-886-ice-cream-cone@2x.png in Resources */,
+				F95754AA1C2E0AD000811137 /* sample-379-barbell.png in Resources */,
 				F95754841C2E053400811137 /* LaunchScreen.storyboard in Resources */,
+				F95754AE1C2E0E4000811137 /* sample-1040-checkmark@2x.png in Resources */,
+				F95754A81C2E0A9B00811137 /* sample-504-doghouse.png in Resources */,
 				F95754811C2E053400811137 /* Assets.xcassets in Resources */,
 				F957547C1C2E053400811137 /* Main.storyboard in Resources */,
 			);
@@ -259,8 +278,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F94D5B761C2F57040009C2E8 /* FoodHistoryTableViewController.swift in Sources */,
 				F957547F1C2E053400811137 /* CalorieMacroTracker.xcdatamodeld in Sources */,
-				F95754791C2E053400811137 /* ViewController.swift in Sources */,
+				F94D5B741C2F56D40009C2E8 /* FoodViewController.swift in Sources */,
 				F95754771C2E053400811137 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,6 +506,7 @@
 				F95754A01C2E053400811137 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F95754A11C2E053400811137 /* Build configuration list for PBXNativeTarget "CalorieMacroTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +515,7 @@
 				F95754A31C2E053400811137 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F95754A41C2E053400811137 /* Build configuration list for PBXNativeTarget "CalorieMacroTrackerUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +524,7 @@
 				F95754A61C2E053400811137 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
