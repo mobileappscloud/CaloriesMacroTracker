@@ -20,6 +20,8 @@
 		F95754AA1C2E0AD000811137 /* sample-379-barbell.png in Resources */ = {isa = PBXBuildFile; fileRef = F95754A91C2E0AD000811137 /* sample-379-barbell.png */; };
 		F95754AC1C2E0AE000811137 /* sample-886-ice-cream-cone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F95754AB1C2E0AE000811137 /* sample-886-ice-cream-cone@2x.png */; };
 		F95754AE1C2E0E4000811137 /* sample-1040-checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F95754AD1C2E0E4000811137 /* sample-1040-checkmark@2x.png */; };
+		F95C554A1C35B8F9008271C8 /* Food+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95C55481C35B8F9008271C8 /* Food+CoreDataProperties.swift */; };
+		F95C554B1C35B8F9008271C8 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95C55491C35B8F9008271C8 /* Food.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		F95754A91C2E0AD000811137 /* sample-379-barbell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sample-379-barbell.png"; sourceTree = "<group>"; };
 		F95754AB1C2E0AE000811137 /* sample-886-ice-cream-cone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sample-886-ice-cream-cone@2x.png"; sourceTree = "<group>"; };
 		F95754AD1C2E0E4000811137 /* sample-1040-checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sample-1040-checkmark@2x.png"; sourceTree = "<group>"; };
+		F95C55481C35B8F9008271C8 /* Food+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Food+CoreDataProperties.swift"; path = "../Food+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F95C55491C35B8F9008271C8 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Food.swift; path = ../Food.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +113,14 @@
 		F95754751C2E053400811137 /* CalorieMacroTracker */ = {
 			isa = PBXGroup;
 			children = (
+				F95C55481C35B8F9008271C8 /* Food+CoreDataProperties.swift */,
+				F95C55491C35B8F9008271C8 /* Food.swift */,
 				F95754A71C2E0A9B00811137 /* sample-504-doghouse.png */,
 				F95754A91C2E0AD000811137 /* sample-379-barbell.png */,
 				F95754AB1C2E0AE000811137 /* sample-886-ice-cream-cone@2x.png */,
 				F95754AD1C2E0E4000811137 /* sample-1040-checkmark@2x.png */,
-				F94D5B751C2F57040009C2E8 /* FoodHistoryTableViewController.swift */,
 				F95754761C2E053400811137 /* AppDelegate.swift */,
+				F94D5B751C2F57040009C2E8 /* FoodHistoryTableViewController.swift */,
 				F94D5B731C2F56D40009C2E8 /* FoodViewController.swift */,
 				F957547A1C2E053400811137 /* Main.storyboard */,
 				F95754801C2E053400811137 /* Assets.xcassets */,
@@ -278,10 +284,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F95C554A1C35B8F9008271C8 /* Food+CoreDataProperties.swift in Sources */,
 				F94D5B761C2F57040009C2E8 /* FoodHistoryTableViewController.swift in Sources */,
 				F957547F1C2E053400811137 /* CalorieMacroTracker.xcdatamodeld in Sources */,
 				F94D5B741C2F56D40009C2E8 /* FoodViewController.swift in Sources */,
 				F95754771C2E053400811137 /* AppDelegate.swift in Sources */,
+				F95C554B1C35B8F9008271C8 /* Food.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

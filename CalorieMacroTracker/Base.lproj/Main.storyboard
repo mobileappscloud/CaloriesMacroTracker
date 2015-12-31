@@ -66,12 +66,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ubd-Ew-3wN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1084" y="293"/>
+            <point key="canvasLocation" x="408" y="923"/>
         </scene>
         <!--Food History-->
         <scene sceneID="tp9-BZ-4cF">
             <objects>
-                <tableViewController id="OAp-0A-8Fw" sceneMemberID="viewController">
+                <tableViewController id="OAp-0A-8Fw" customClass="FoodHistoryTableViewController" customModule="CalorieMacroTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ehR-0R-hVq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,12 +86,11 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="OAp-0A-8Fw" id="Saf-KA-qas"/>
-                            <outlet property="delegate" destination="OAp-0A-8Fw" id="y51-r0-TBN"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Food History" id="00c-p3-dq3"/>
+                    <connections>
+                        <outlet property="myTableVew" destination="ehR-0R-hVq" id="ltm-E0-wVc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tyj-be-FpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

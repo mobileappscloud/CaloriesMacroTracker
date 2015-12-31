@@ -11,14 +11,46 @@ import CoreData
 
 class FoodHistoryTableViewController: UITableViewController {
 
-    override func viewDidLoad() {
+    @IBOutlet var myTableVew: UITableView!
+    
+    var foods : [Food] = []
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        //Basic TableView setup
+        title = "Food Items"
+        myTableVew.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+        //Grab the Entity
+        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context = delegate.managedObjectContext
+        let request = NSFetchRequest(entityName: "Food")
+        
+        //Try Catch for Error
+        
+        var err: NSError?
+        
+        do
+            {
+                foods = try context.executeFetchRequest(request) as! [Food]
+            }
+        
+            catch let err1 as NSError
+            {
+                err = err1;
+            }
+        
+            if(err != nil)
+            {
+                print("Problem with loading the data")
+            }
+        
+            else
+            {
+                print("Successfully loaded the data")
+            }
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,25 +60,34 @@ class FoodHistoryTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {
+       return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return foods.count
     }
 
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        
+        let foodName = foods[indexPath.row].name
+        let foodProtein = foods[indexPath.row].protein
+        let foodCarbs = foods[indexPath.row].carbs
+        let foodFats = foods[indexPath.row].fats
+        let foodCalories = foods[indexPath.row].calories
+        
+        //Update the cell
+        cell.textLabel?.text = foodName
+        cell.detailTextLabel?.text = "\(foodCalories)g calories \(foodCarbs)g carbs \(foodFats)g fats \(foodProtein)g protein"
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

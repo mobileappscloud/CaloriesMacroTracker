@@ -21,7 +21,10 @@ class FoodViewController: UIViewController {
     
     @IBOutlet var numOfFats: UITextField!
     
-    var foodItems : [NSManagedObject] = []
+    var foodItems : [Food] = []
+    
+    
+    
     
     func saveFoodItem (name: String, numOfCalories: Int, numOfProtein: Int, numOfCarbs: Int, numOfFats: Int)
     {
@@ -29,7 +32,7 @@ class FoodViewController: UIViewController {
         let context = delegate.managedObjectContext
         
         //Get the Entity
-        let foodItem = NSEntityDescription.insertNewObjectForEntityForName("Food", inManagedObjectContext: context)
+        let foodItem = NSEntityDescription.insertNewObjectForEntityForName("Food", inManagedObjectContext: context) as! Food
         
         //Assign the proper values to each property within the entity
         foodItem.setValue(name, forKey: "name")
@@ -65,12 +68,21 @@ class FoodViewController: UIViewController {
     
     @IBAction func addFoodItem(sender: AnyObject)
     {
-    
+        let calorieNum = Int(numOfCalories.text!)
+        let proteinNum = Int(numOfProtein.text!)
+        let carbsNum = Int(numOfCarbs.text!)
+        let fatsNum = Int(numOfFats.text!)
+        
+        //Save the textField entries
+        self.saveFoodItem(nameOfMeal.text!, numOfCalories: calorieNum!, numOfProtein: proteinNum!, numOfCarbs: carbsNum!, numOfFats: fatsNum!)
     }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
+        
 
         // Do any additional setup after loading the view.
     }
