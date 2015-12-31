@@ -23,9 +23,6 @@ class FoodViewController: UIViewController {
     
     var foodItems : [Food] = []
     
-    
-    
-    
     func saveFoodItem (name: String, numOfCalories: Int, numOfProtein: Int, numOfCarbs: Int, numOfFats: Int)
     {
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -33,15 +30,13 @@ class FoodViewController: UIViewController {
         
         //Get the Entity
         let foodItem = NSEntityDescription.insertNewObjectForEntityForName("Food", inManagedObjectContext: context) as! Food
-        
-        //Assign the proper values to each property within the entity
+
         foodItem.setValue(name, forKey: "name")
         foodItem.setValue(numOfCalories, forKey: "calories")
         foodItem.setValue(numOfProtein, forKey: "protein")
         foodItem.setValue(numOfFats, forKey: "fats")
         foodItem.setValue(numOfCarbs, forKey: "carbs")
         
-        //Try Catch for an error
         var err: NSError?
         
         do

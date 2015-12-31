@@ -28,8 +28,6 @@ class FoodHistoryTableViewController: UITableViewController {
         let context = delegate.managedObjectContext
         let request = NSFetchRequest(entityName: "Food")
         
-        //Try Catch for Error
-        
         var err: NSError?
         
         do
