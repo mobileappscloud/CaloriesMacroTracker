@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class FoodViewController: UIViewController {
+class FoodViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var nameOfMeal: UITextField!
     
@@ -57,6 +57,10 @@ class FoodViewController: UIViewController {
         
             else
             {
+                let alert = UIAlertController(title: "Success", message: "Food saved", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+                
                 print("Successfully saved the food item")
             }
     }
@@ -72,14 +76,34 @@ class FoodViewController: UIViewController {
         self.saveFoodItem(nameOfMeal.text!, numOfCalories: calorieNum!, numOfProtein: proteinNum!, numOfCarbs: carbsNum!, numOfFats: fatsNum!)
     }
     
-
-    override func viewDidLoad() {
+    func textFieldShouldReturn(textField: UITextField) -> Bool
+    {
+        nameOfMeal.resignFirstResponder()
+        numOfCalories.resignFirstResponder()
+        numOfCarbs.resignFirstResponder()
+        numOfFats.resignFirstResponder()
+        numOfProtein.resignFirstResponder()
+        
+        return true
+    }
+   
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
-       
+        nameOfMeal.delegate = self
+        numOfCalories.delegate = self
+        numOfCarbs.delegate = self
+        numOfFats.delegate = self
+        numOfProtein.delegate = self
         
-
-        // Do any additional setup after loading the view.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard()
+    {
+       view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {

@@ -71,7 +71,9 @@ class FoodHistoryTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        
+        let cellIdentifier = "Cell"
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: cellIdentifier)
         
         let foodName = foods[indexPath.row].name
         let foodProtein = foods[indexPath.row].protein
@@ -81,8 +83,8 @@ class FoodHistoryTableViewController: UITableViewController {
         
         //Update the cell
         cell.textLabel?.text = foodName
-        cell.detailTextLabel?.text = "\(foodCalories)g calories \(foodCarbs)g carbs \(foodFats)g fats \(foodProtein)g protein"
-        
+        cell.detailTextLabel?.text = "\(foodCalories!) calories \(foodCarbs!)g carbs \(foodFats!)g fats \(foodProtein!)g protein"
+        //cell.detailTextLabel?.text = "test label 123"
         return cell
     }
     
