@@ -18,6 +18,7 @@ class FoodHistoryTableViewController: UITableViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList:", name: "load", object: nil)
         
         //Basic TableView setup
         title = "Food Items"
@@ -48,14 +49,20 @@ class FoodHistoryTableViewController: UITableViewController {
             else
             {
                 print("Successfully loaded the data")
+                myTableVew.reloadData()
             }
+    }
+    
+    func loadList(notification: NSNotification)
+    {
+        self.myTableVew.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int
@@ -68,10 +75,8 @@ class FoodHistoryTableViewController: UITableViewController {
         return foods.count
     }
 
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        
         let cellIdentifier = "Cell"
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: cellIdentifier)
         

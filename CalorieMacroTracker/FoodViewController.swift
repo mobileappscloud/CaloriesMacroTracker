@@ -74,6 +74,7 @@ class FoodViewController: UIViewController, UITextFieldDelegate {
         
         //Save the textField entries
         self.saveFoodItem(nameOfMeal.text!, numOfCalories: calorieNum!, numOfProtein: proteinNum!, numOfCarbs: carbsNum!, numOfFats: fatsNum!)
+        NSNotificationCenter.defaultCenter().postNotificationName("load", object: nil)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool
