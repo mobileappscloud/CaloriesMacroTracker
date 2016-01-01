@@ -55,6 +55,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqo-MJ-kB4">
+                                <rect key="frame" x="181" y="333" width="238" height="30"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Clear All">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearEntries:" destination="0q3-Ia-0Dd" eventType="touchUpInside" id="VSS-wH-hch"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94901967050000002" green="0.91372555489999996" blue="0.80392163989999998" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -66,9 +76,12 @@
                             <constraint firstItem="hRJ-QL-9xF" firstAttribute="leading" secondItem="ogY-Gp-jug" secondAttribute="leading" id="Oqn-PI-dkm"/>
                             <constraint firstItem="0sX-j5-IJO" firstAttribute="trailing" secondItem="TeD-uA-BwK" secondAttribute="trailing" id="Qen-c1-gdV"/>
                             <constraint firstItem="2jk-ac-6r8" firstAttribute="trailing" secondItem="hRJ-QL-9xF" secondAttribute="trailing" id="Qob-qq-8Kb"/>
+                            <constraint firstItem="dqo-MJ-kB4" firstAttribute="trailing" secondItem="PFA-aP-y7J" secondAttribute="trailing" id="SIn-SU-hxe"/>
                             <constraint firstItem="TeD-uA-BwK" firstAttribute="leading" secondItem="0sX-j5-IJO" secondAttribute="leading" id="TP2-Re-qdW"/>
+                            <constraint firstItem="dqo-MJ-kB4" firstAttribute="leading" secondItem="PFA-aP-y7J" secondAttribute="leading" id="ZJm-cY-YAu"/>
                             <constraint firstItem="TeD-uA-BwK" firstAttribute="leading" secondItem="PFA-aP-y7J" secondAttribute="leading" id="ZYh-Mt-fyL"/>
                             <constraint firstItem="hRJ-QL-9xF" firstAttribute="top" secondItem="ogY-Gp-jug" secondAttribute="bottom" constant="8" symbolic="YES" id="abU-1I-fRs"/>
+                            <constraint firstItem="dqo-MJ-kB4" firstAttribute="top" secondItem="PFA-aP-y7J" secondAttribute="bottom" constant="8" symbolic="YES" id="bzG-Wd-Tmd"/>
                             <constraint firstItem="TeD-uA-BwK" firstAttribute="top" secondItem="0sX-j5-IJO" secondAttribute="bottom" constant="8" symbolic="YES" id="fJy-nF-eDY"/>
                             <constraint firstItem="0sX-j5-IJO" firstAttribute="trailing" secondItem="2jk-ac-6r8" secondAttribute="trailing" id="fdR-0Y-D9A"/>
                             <constraint firstItem="0sX-j5-IJO" firstAttribute="top" secondItem="2jk-ac-6r8" secondAttribute="bottom" constant="8" symbolic="YES" id="h59-zL-oOA"/>

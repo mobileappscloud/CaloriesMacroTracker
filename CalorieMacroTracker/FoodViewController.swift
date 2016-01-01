@@ -67,14 +67,83 @@ class FoodViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func addFoodItem(sender: AnyObject)
     {
-        let calorieNum = Int(numOfCalories.text!)
-        let proteinNum = Int(numOfProtein.text!)
-        let carbsNum = Int(numOfCarbs.text!)
-        let fatsNum = Int(numOfFats.text!)
+        var calorieNum = Int(numOfCalories.text!)
+        if calorieNum == nil
+        {
+            calorieNum = 0
+        }
+        var proteinNum = Int(numOfProtein.text!)
+        if proteinNum == nil
+        {
+            proteinNum = 0
+        }
+        var carbsNum = Int(numOfCarbs.text!)
+        if carbsNum == nil
+        {
+            carbsNum = 0
+        }
+        var fatsNum = Int(numOfFats.text!)
+        if fatsNum == nil
+        {
+            fatsNum = 0
+        }
         
         //Save the textField entries
-        self.saveFoodItem(nameOfMeal.text!, numOfCalories: calorieNum!, numOfProtein: proteinNum!, numOfCarbs: carbsNum!, numOfFats: fatsNum!)
-        NSNotificationCenter.defaultCenter().postNotificationName("load", object: nil)
+        if (validateTextFieldEntries(nameOfMeal.text!, calorieNumber: calorieNum!, proteinNumber: proteinNum!, carbsNumber: carbsNum!, fatsNumber: fatsNum!))
+        {
+            self.saveFoodItem(nameOfMeal.text!, numOfCalories: calorieNum!, numOfProtein: proteinNum!, numOfCarbs: carbsNum!, numOfFats: fatsNum!)
+        
+            NSNotificationCenter.defaultCenter().postNotificationName("load", object: nil)
+        }
+        
+        else
+        {
+            let alert = UIAlertController(title: "Oops!", message: "Enter all the data!", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func validateTextFieldEntries(foodName:String, calorieNumber:Int, proteinNumber:Int, carbsNumber:Int, fatsNumber:Int) ->Bool
+    {
+        var returnValue: Bool
+        returnValue = true
+        
+        if foodName.isEmpty
+        {
+            return false
+        }
+        
+        if calorieNumber == 0
+        {
+            return false
+        }
+        
+        if proteinNumber == 0
+        {
+            return false
+        }
+        
+        if carbsNumber == 0
+        {
+            return false
+        }
+        
+        if fatsNumber == 0
+        {
+            return false
+        }
+        
+        return returnValue
+    }
+
+    @IBAction func clearEntries(sender: UIButton)
+    {
+        nameOfMeal.text! = ""
+        numOfCalories.text! = ""
+        numOfCarbs.text! = ""
+        numOfFats.text! = ""
+        numOfProtein.text! = ""
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool
@@ -121,6 +190,11 @@ class FoodViewController: UIViewController, UITextFieldDelegate {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
+    */
+    
+    
+    /*
+    if let nameMeal = nameOfMeal.text, numCal = numOfCalories.text, numCarb = numOfCarbs.text, numFats = numOfFats.text, numProtein = numOfProtein.text where !nameMeal.isEmpty && numCal.isEmpty && numCarb.isEmpty && numFats.isEmpty && numProtein.isEmpty
     */
 
 }
